@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-luxury-ivory: #F9F8F6;
+  --color-luxury-stone: #E4E3E0;
+  --color-luxury-charcoal: #1A1A1A;
+  --color-luxury-taupe: #8C857B;
+  --color-luxury-sand: #D2CFC9;
+  --color-luxury-gold: #C5A059;
+  --color-luxury-olive: #5A5A40;
+}
+
+@layer base {
+  body {
+    @apply bg-luxury-ivory text-luxury-charcoal font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.editorial-heading {
+  @apply font-serif italic tracking-tight;
+}
+
+.micro-label {
+  @apply text-[10px] uppercase tracking-[0.15em] font-semibold text-luxury-taupe;
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.luxury-card {
+  @apply bg-white rounded-2xl border border-luxury-stone/50 shadow-sm transition-all duration-300 hover:shadow-md;
+}
